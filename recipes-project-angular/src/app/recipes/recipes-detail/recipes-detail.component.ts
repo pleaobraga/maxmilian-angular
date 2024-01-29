@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { Recipe } from '../recipe.model'
 
 @Component({
   selector: 'app-recipes-detail',
   templateUrl: './recipes-detail.component.html',
-  styleUrl: './recipes-detail.component.scss'
+  styleUrl: './recipes-detail.component.scss',
 })
 export class RecipesDetailComponent {
-
+  @Input() recipe: Recipe
 }

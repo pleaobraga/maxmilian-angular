@@ -1,0 +1,14 @@
+<div class="container">
+  <app-cockpit
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      @for (element of serverElements; track $index) {
+      <app-server-element [element]="element"></app-server-element>
+      }
+    </div>
+  </div>
+</div>
