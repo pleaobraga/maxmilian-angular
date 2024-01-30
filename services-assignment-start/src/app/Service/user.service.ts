@@ -14,13 +14,11 @@ export class UserService {
     this.inactiveUsers.push(this.activeUsers[id]);
     this.activeUsers.splice(id, 1);
     this.counterService.countInativation();
-    console.log(this.counterService.inativationCounter);
   }
 
   setToActive(id: number) {
     this.activeUsers.push(this.inactiveUsers[id]);
     this.inactiveUsers.splice(id, 1);
     this.counterService.countAtivation();
-    console.log(this.counterService.ativationCounter);
   }
 }
