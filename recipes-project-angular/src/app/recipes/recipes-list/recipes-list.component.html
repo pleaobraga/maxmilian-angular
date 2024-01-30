@@ -9,10 +9,7 @@
 <div class="row">
   <div class="col-xs-12">
     @for (recipe of recipes; track $index) {
-      <app-recipes-list-item
-        [recipe]="recipe"
-        (selectedRecipe)="onSelectedRecipe(recipe)">
-      </app-recipes-list-item>
+      <app-recipes-list-item [recipe]="recipe"> </app-recipes-list-item>
     }
   </div>
 </div>
